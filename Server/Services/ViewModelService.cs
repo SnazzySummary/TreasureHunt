@@ -33,7 +33,8 @@ public class ViewModelService : IViewModelService
 {
 
   private readonly IDatabaseService _databaseService;
-
+  //todo is this injecting?
+  //todo do the same with filesystem service.
   public ViewModelService(IDatabaseService databaseService)
   {
     _databaseService = databaseService;
@@ -55,7 +56,9 @@ public class ViewModelService : IViewModelService
           Username = hunt.User.Username,
           Title = hunt.Title,
           Image = FileSystemService.GetImagePathFromLocalFileSystem(hunt.UserId, hunt.HuntId)
-        }
+        } //todo Refactor the FileSystemService out of this viewModelService
+          //the image url can be passed into this method separately and the filesystemservice can be called
+          //from HTTP_HUNTS_GET.
       );
     }
     return viewModels;

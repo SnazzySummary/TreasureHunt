@@ -1,0 +1,26 @@
+[
+  {
+    "huntId": "a38e54cb-3528-4441-b429-d63b437b42b0",
+    "userId": "4584fd0c-ee67-434c-ab06-9318f5367e3a",
+    "username": "Snazzy101",
+    "title": "Testing The Big bang",
+    "participants": [],
+    "image": "c:\\Projects\\4584fd0c-ee67-434c-ab06-9318f5367e3a\\a38e54cb-3528-4441-b429-d63b437b42b0\\Image.jpg"
+  },
+  {
+    "huntId": "ea389739-b8a4-44bc-a539-8db570b263a4",
+    "userId": "4584fd0c-ee67-434c-ab06-9318f5367e3a",
+    "username": "Snazzy101",
+    "title": "Testing The Big bang",
+    "participants": [],
+    "image": null
+  },
+  {
+    "huntId": "efd6b2e0-eabe-4ada-b3e9-edf9769a5e2d",
+    "userId": "4584fd0c-ee67-434c-ab06-9318f5367e3a",
+    "username": "Snazzy101",
+    "title": "Hunt for the Red October",
+    "participants": [],
+    "image": null
+  }
+]

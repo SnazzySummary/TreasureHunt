@@ -1,28 +1,20 @@
-import "react-native-gesture-handler";
-import { StyleSheet, Text, View, StatusBar, SafeAreaView } from "react-native";
+import { StatusBar } from "react-native";
+import { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-const Drawer = createDrawerNavigator();
-import Home from "./components/Home";
-import Settings from "./components/Settings";
+import Login from "./components/Login";
+import DrawerStackNavigator from "./components/DrawerStackNavigator";
 
 export default function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <NavigationContainer>
       <StatusBar />
-      <Drawer.Navigator>
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Settings" component={Settings} />
-      </Drawer.Navigator>
+      {loggedIn ? (
+        <DrawerStackNavigator />
+      ) : (
+        <Login setLoggedIn={setLoggedIn} />
+      )}
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
